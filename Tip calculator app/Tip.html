@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Tip.css">
-    <script src="/Tip.js"></script>
+    <link rel="stylesheet" href="./Tip.css">
+    <script src="./Tip.js" defer></script>
 </head>
 
 <body>
@@ -21,11 +21,11 @@
             <div>
                 <label class="color">Select Tip %</label>
                 <div class="percente" id="selecttip">
-                    <button type="button" class="button" onclick="calculateTip()">5%</button>
-                    <button type="button" class="button" onclick="calculateTip2()">10%</button>
-                    <button type="button" class="button" onclick="calculateTip3()">15%</button><br>
-                    <button type="button" class="button" onclick="calculateTip4()">25%</button>
-                    <button type="button" class="button" onclick="calculateTip5()">50%</button>
+                    <button type="button" class="button" onclick="calculateTip(0.05)">5%</button>
+                    <button type="button" class="button" onclick="calculateTip(0.1)">10%</button>
+                    <button type="button" class="button" onclick="calculateTip(0.15)">15%</button><br>
+                    <button type="button" class="button" onclick="calculateTip(0.25)">25%</button>
+                    <button type="button" class="button" onclick="calculateTip(0.5)">50%</button>
                     <input type="text" placeholder="Custom" class="custom" id="custom">
                 </div>
             </div>
@@ -47,7 +47,7 @@
                 </p>
                 <h2 id="total">$0.00</h2>
             </div>
-            <input type="button" class="reset" value="Reset">
+            <input type="button" class="reset" onclick="reset()">
         </div>
     </main>
 </body>

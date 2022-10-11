@@ -1,41 +1,28 @@
-function calculateTip(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var numOfPeople = document.getElementById("numofpeople").value;
-    document.getElementById("tip-per-person").innerHTML = billAmt / numOfPeople * 0.05
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * 0.05) * numOfPeople
+const custom = document.getElementById("custom");
+const tip_per_person = document.getElementById("tip-per-person");
+const total = document.getElementById("total");
+const billAmt = document.getElementById("billAmt");
+const numOfPeople = document.getElementById("numofpeople");
+
+custom.oninput = function(ev) {
+    const value = ev.target.value / 100;
+    calculateTip(value);
 }
 
-function calculateTip2(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var numOfPeople = document.getElementById("numofpeople").value;
-    document.getElementById("tip-per-person").innerHTML = (billAmt / numOfPeople) * 0.10
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * 0.10) * numOfPeople
+
+function calculateTip(percentage) {
+    const billAmt = billAmt.value;
+    const numOfPeople = numOfPeople.value;
+    const tip = billAmt / numOfPeople * percentage;
+    const total = tip * numOfPeople;
+
+    tip_per_person.innerHTML = tip.toFixed(2);
+    total.innerHTML = total.toFixed(2);
 }
 
-function calculateTip3(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var numOfPeople = document.getElementById("numofpeople").value;
-    document.getElementById("tip-per-person").innerHTML = billAmt / numOfPeople * 0.15
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * 0.15) * numOfPeople
-}
-
-function calculateTip4(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var numOfPeople = document.getElementById("numofpeople").value;
-    document.getElementById("tip-per-person").innerHTML = billAmt / numOfPeople * 0.25
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * 0.25) * numOfPeople
-}
-
-function calculateTip5(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var numOfPeople = document.getElementById("numofpeople").value;
-    document.getElementById("tip-per-person").innerHTML = billAmt / numOfPeople * 0.5
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * 0.5) * numOfPeople
-}
-
-function calculateTipCustom(){ 
-    var billAmt = document.getElementById("billAmt").value;
-    var custom = document.getElementById("custom").value;
-    document.getElementById("tip-per-person").innerHTML = (billAmt /numOfPeople) * custom
-    document.getElementById("total").innerHTML = ((billAmt / numOfPeople) * custom) * numOfPeople
+function reset() {
+    billAmt.value = "";
+    numOfPeople.value = "";
+    tip_per_person.innerHTML = "0.00";
+    total.innerHTML = "0.00";
 }
