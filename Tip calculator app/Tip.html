@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Tip.css">
+    <script src="/Tip.js"></script>
+</head>
+
+<body>
+    <img src="logo.svg" alt="no logo" class="splitter">
+    <main>
+        <div class="conteiner">
+            <div>
+                <label class="color">Bill</label>
+                <input type="text" class="bill" placeholder="0" id="billAmt">
+            </div>
+            <div>
+                <label class="color">Select Tip %</label>
+                <div class="percente" id="selecttip">
+                    <button type="button" class="button" onclick="calculateTip()">5%</button>
+                    <button type="button" class="button" onclick="calculateTip2()">10%</button>
+                    <button type="button" class="button" onclick="calculateTip3()">15%</button><br>
+                    <button type="button" class="button" onclick="calculateTip4()">25%</button>
+                    <button type="button" class="button" onclick="calculateTip5()">50%</button>
+                    <input type="text" placeholder="Custom" class="custom" id="custom">
+                </div>
+            </div>
+            <div>
+                <label class="color">Number of People</label>
+                <input type="text" class="people" placeholder="0" id="numofpeople">
+            </div>
+        </div>
+        <div class="output">
+            <div class="tipperson">
+                <p class="tipamount">Tip Amount<br>
+                    <span>/ person</span>
+                </p>
+                <h2 id="tip-per-person">$0.00</h2>
+            </div>
+            <div class="totaltip">
+                <p class="total">Total<br>
+                    <span>/ person</span>
+                </p>
+                <h2 id="total">$0.00</h2>
+            </div>
+            <input type="button" class="reset" value="Reset">
+        </div>
+    </main>
+</body>
+
+</html>

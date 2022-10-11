@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Space mono;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+
+}
+
+.splitter {
+    display: flex;
+    position: absolute;
+    left: 48%;
+    top: 8%;
+}
+
+main {
+    background-color: white;
+    width: 870px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.bill {
+    background: url(/icon-dollar.svg) no-repeat 15px;
+    display: flex;
+    text-align: right;
+    border: none;
+    width: 380px;
+    height: 40px;
+    margin-left: 2px;
+    margin-bottom: 30px;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    background-color: hsl(189, 41%, 97%);
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bill:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+.bill:focus {
+    border:  hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+
+.custom {
+    text-align: right;
+    border: none;
+    width: 116px;
+    height: 40px;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    margin-left: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+.custom:focus {
+    border:  hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+
+.people {
+    background: url(/icon-person.svg) no-repeat 15px;
+    text-align: right;
+    display: flex;
+    border: none;
+    width: 380px;
+    height: 40px;
+    margin-left: 2px;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    background-color: hsl(189, 41%, 97%);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.people:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.people:focus {
+    border:  hsl(172, 67%, 45%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+}
+
+.conteiner {
+    margin: 35px;
+}
+
+.button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    width: 117px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    margin: 7px 2px;
+    font-size: 24px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: hsl(172, 82%, 78%);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    color: hsl(183, 100%, 15%);
+}
+.button:focus{
+    background-color: hsl(172, 67%, 45%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: hsl(183, 100%, 15%);
+}
+
+label {
+    color: hsl(186, 14%, 43%);
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.reset {
+    width: 320px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(186, 14%, 43%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: hsl(172, 67%, 45%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.tipamount {
+    color: white;
+    margin: 0px 0px 0px 35px;
+    font-size: 14px;
+}
+
+.total {
+    color: white;
+    margin: 50px 0px 50px 35px;
+    font-size: 14px;
+}
+
+span {
+    color: hsl(184, 14%, 56%);
+}
+
+::placeholder {
+    color: rgb(154, 177, 177);
+    font-size: 20px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percente {
+    margin-bottom: 25px;
+}
+
+.totaltip, .tipperson {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    font-size: 24px;
+    color:hsl(172, 67%, 45%)
+}
+
+.tipperson {
+    margin-top: 30px;
+}
+
+.totaltip {
+    margin-bottom: 37px;
+}
